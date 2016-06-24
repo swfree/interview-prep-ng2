@@ -32,6 +32,6 @@ export class InterviewPrepNg2AppComponent implements OnInit {
   }
 
   ngOnInit() {
-    // this.getQuestions();
+    this.getQuestions();
   }
 }

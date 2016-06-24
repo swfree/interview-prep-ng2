@@ -8,7 +8,7 @@ import { Observable }     from 'rxjs/Observable';
 export class QuestionService {
   constructor (private http: Http) { }
 
-  private devAPI = '';
+  private devAPI = 'http://localhost:3000';
 
   getQuestions(): Observable<Question[]> {
     return this.http.get(this.devAPI)
@@ -18,7 +18,7 @@ export class QuestionService {
 
   private extractData(res: Response) {
     let body = res.json();
-    return body.result || { };
+    return body || { };
   }
 
   private handleError(error: any) {
